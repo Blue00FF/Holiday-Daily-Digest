@@ -17,7 +17,7 @@ sender = "Calendarific <bot@calendarific.com>"
 receiver = "A Test User <to@example.com>"
 
 session = requests.Session()
-session_token = config['mailtrap_api_key']
+session_token = config['calendarific_api_key']
 my_headers = {'Authorization': f'Bearer {session_token}'}
 session.headers.update(my_headers)
 response = session.get("https://calendarific.com/api/v2")
