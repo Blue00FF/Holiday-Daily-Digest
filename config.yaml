@@ -2,4 +2,4 @@
 #the following fields must be inserted as strings, i.e. in between quotations.
 mailtrap_username : #insert here the first credential given when accessing the mailtrap account, NOT your mailtrap account username.
 mailtrap_password : #insert here the second credential given when accessing the mailtrap account, NOT your mailtrap account password.
-mailtrap_api_key : #insert here the api key given when creating a mailtrap account.
+mailtrap_api_key : #insert here the api key given when creating a calendarific account.
