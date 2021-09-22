@@ -16,11 +16,10 @@ config = load_yaml("./config.yaml")
 sender = "Calendarific <bot@calendarific.com>"
 receiver = "A Test User <to@example.com>"
 
-session = requests.Session()
-session_token = config['calendarific_api_key']
-my_headers = {'Authorization': f'Bearer {session_token}'}
-session.headers.update(my_headers)
-response = session.get("https://calendarific.com/api/v2")
+api_key = config['calendarific_api_key']
+query_params = {"api_key": api_key, "date": datetime.today().strftime("%Y-%m-%d")}
+response = session.get("https://calendarific.com/api/v2", params=query_params)
+holidays = response.json()[""]
 
 if response.status_code == 200:
     message = f"""\
@@ -33,6 +32,7 @@ if response.status_code == 200:
     This is your daily update from Calendarific on today's holidays from all over
     the world.
 
+    {holidays}
     """
 
     try:
