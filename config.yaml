@@ -3,3 +3,4 @@
 mailtrap_username : #insert here the first credential given when accessing the mailtrap account, NOT your mailtrap account username.
 mailtrap_password : #insert here the second credential given when accessing the mailtrap account, NOT your mailtrap account password.
 calendarific_api_key : #insert here the api key given when creating a calendarific account.
+NASA_api_key : #insert here the api key given when registering for the NASA API
