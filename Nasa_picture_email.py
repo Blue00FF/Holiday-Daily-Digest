@@ -12,7 +12,7 @@ def load_yaml(filepath):
             print(e)
 
 
-sender = "NASA <NASA@totallyNASA.com>"
+sender = "NASA <from@example.com>"
 receiver = "A Test User <to@example.com>"
 
 endpoint = "https://api.nasa.gov/planetary/apod"
@@ -33,7 +33,7 @@ if response.status_code == 200:
 
         Hello Fabrizio,
 
-        This is the Astronomy Picture of the Day:
+        This is today's Astronomy Picture of the Day:
 
         {explanation}
 
@@ -53,17 +53,8 @@ if response.status_code == 200:
 
         {url}
         """
-    try:
-        with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
-            server.login(config['mailtrap_username'], config['mailtrap_password'])
-            server.sendmail(sender, receiver, message)
-    except ConnectionRefusedError:
-        print("Failed to connect to the server. Check your connection.")
-    except smtplib.SMTPServerDisconnected:
-        print("""Failed to connect to the server. Wrong user/password
-        combination.""")
-    except smtplib.SMTPException as e:
-        print("SMTP error occurred: " + str(e) + """. Please contact customer
-        support.""")
+    message = message.encode("ascii", "ignore").decode("ascii")
+    with smtplib.SMTP("localhost", 1025) as server:
+        server.sendmail(sender, receiver, message)
 else:
     print(f"{response.status_code}: {response.reason}")
