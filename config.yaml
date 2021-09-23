@@ -1,4 +1,4 @@
-#config.yaml
-#the following fields must be inserted as strings, i.e. in between quotations.
-calendarific_api_key : #insert here the api key given when creating a calendarific account.
-NASA_api_key : #insert here the api key given when registering for the NASA API
+mailtrap_username : "45063e607846bc"
+mailtrap_password : "f7481e2ebb7075"
+calendarific_api_key : "1619c68bd0c5f534e5762d593314eb371b32b159"
+NASA_api_key : "H6E3I3GAFyGKwIU3k6mbi22YkZZMKeJBdsOUegtc"
