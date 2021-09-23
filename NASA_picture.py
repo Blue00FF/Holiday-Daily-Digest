@@ -52,6 +52,6 @@ if response.status_code == 200:
 
         {url}
         """
-        print(message)
+    print(message)
 else:
     print(f"{response.status_code}: {response.reason}")
