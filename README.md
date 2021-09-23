@@ -10,6 +10,7 @@ To set up the server, you can check the Real Python guide (https://realpython.co
 you can just copy and paste to your command line the following instruction: 
 
 FOR WINDOWS AND MACOS: python -m smtpd -c DebuggingServer -n localhost:1025
+
 FOR LINUX: sudo python -m smtpd -c DebuggingServer -n localhost:1025
 
 To use the program, you must register for a free account on Calendarific to get an API key.  (https://calendarific.com/signup)
